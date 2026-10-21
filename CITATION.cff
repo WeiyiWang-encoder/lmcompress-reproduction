@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this reproduction, please cite it and the original paper it reproduces."
+# TODO: check the names, affiliation and ORCID before publishing.
+authors:
+  - family-names: "Wang"
+    given-names: "Weiyi"
+    affiliation: "The University of Sydney"
+title: "Independent reproduction of Lossless data compression by large models (LMCompress)"
+version: 1.0.0
+date-released: "2026-10-21"
+license: MIT
+type: software
+keywords:
+  - lossless compression
+  - arithmetic coding
+  - large language models
+  - reproduction
+  - imagegpt
+  - bgpt
+  - llama-3
+references:
+  - type: article
+    title: "Lossless data compression by large models"
+    authors:
+      - family-names: "Li"
+        given-names: "T."
+    journal: "Nature Machine Intelligence"
+    volume: 7
+    start: 794
+    end: 799
+    year: 2025
+    doi: "10.1038/s42256-025-01033-7"

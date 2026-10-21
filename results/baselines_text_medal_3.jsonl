@@ -1,0 +1,12 @@
+{"codec": "zlib 9", "compressed_bytes": 36109, "compression_rate_pct": 34.758293, "compression_ratio": 2.877011, "original_bytes": 103886, "seconds": 0.007, "unit": "medal_102285.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 32652, "compression_rate_pct": 31.430607, "compression_ratio": 3.181612, "original_bytes": 103886, "seconds": 0.038, "unit": "medal_102285.csv"}
+{"codec": "brotli q11", "compressed_bytes": 29719, "compression_rate_pct": 28.60732, "compression_ratio": 3.495609, "original_bytes": 103886, "seconds": 0.118, "unit": "medal_102285.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 32884, "compression_rate_pct": 31.653928, "compression_ratio": 3.159166, "original_bytes": 103886, "seconds": 0.033, "unit": "medal_102285.csv"}
+{"codec": "zlib 9", "compressed_bytes": 37221, "compression_rate_pct": 35.523679, "compression_ratio": 2.815024, "original_bytes": 104778, "seconds": 0.006, "unit": "medal_103851.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33728, "compression_rate_pct": 32.189964, "compression_ratio": 3.106558, "original_bytes": 104778, "seconds": 0.038, "unit": "medal_103851.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30408, "compression_rate_pct": 29.021359, "compression_ratio": 3.445738, "original_bytes": 104778, "seconds": 0.131, "unit": "medal_103851.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 34039, "compression_rate_pct": 32.486782, "compression_ratio": 3.078175, "original_bytes": 104778, "seconds": 0.03, "unit": "medal_103851.csv"}
+{"codec": "zlib 9", "compressed_bytes": 36372, "compression_rate_pct": 34.769807, "compression_ratio": 2.876059, "original_bytes": 104608, "seconds": 0.006, "unit": "medal_108122.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33008, "compression_rate_pct": 31.553992, "compression_ratio": 3.169171, "original_bytes": 104608, "seconds": 0.04, "unit": "medal_108122.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30111, "compression_rate_pct": 28.784605, "compression_ratio": 3.474079, "original_bytes": 104608, "seconds": 0.123, "unit": "medal_108122.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33305, "compression_rate_pct": 31.837909, "compression_ratio": 3.14091, "original_bytes": 104608, "seconds": 0.029, "unit": "medal_108122.csv"}

@@ -1,0 +1,1 @@
+{"codec": "zstd --ultra -22 (raw yuv)", "compressed_bytes": 406369765, "compression_rate_pct": 51.034655, "compression_ratio": 1.959453, "frames": 60, "frames_in_file": 60, "height": 2160, "original_bytes": 796262400, "path_form": "raw YUV420", "seconds": 736.561, "unit": "4k_aerial_first_second.y4m", "width": 4096}

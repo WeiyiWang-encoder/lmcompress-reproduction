@@ -1,0 +1,13 @@
+=== y4m_info strict frame count ===
+4096 2160 60 60
+exit=0
+
+=== zstd (Windows exe reached from WSL) ===
+executable: yes
+*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***
+
+=== ffmpeg encoders present ===
+ V.S..D ffv1                 FFmpeg video codec #1
+ V....D libx264              libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (codec h264)
+ V....D libx264rgb           libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 RGB (codec h264)
+ V....D libx265              libx265 H.265 / HEVC (codec hevc)

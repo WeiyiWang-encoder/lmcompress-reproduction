@@ -1,0 +1,28 @@
+Independent re-run of the AUTHORS' harness
+  arms         = lora
+  repo         = <capsule>
+  test file    = medal_102285.csv  (103886 container bytes)
+  data_path    = <repo>\artifacts\task1_one
+  model_path   = <capsule>\data\model\finetuned_llama\Llama-3-8B
+  lora_path    = <capsule>\data\model\finetuned_llama\Llama-3-8B_lora
+  context      = 8192   batch_size = 1
+  device       = cuda:0 NVIDIA GeForce RTX 5070
+
+==========================================================================
+ARM: + the authors' published LoRA   lora_path=<capsule>\data\model\finetuned_llama\Llama-3-8B_lora
+==========================================================================
+   | Theoretical compression ratio: 10.509252
+   | Total size: 103369
+   | compressed size: 9836.0
+   | total compression ratio: 10.509252total loss: 0
+   | time cost 2758.587637424469
+   -> ratio = 10.509252   [2779s]   raw stdout -> <repo>\results\_verify_refrun_lora.txt
+
+==========================================================================
+RESULT - authors' own harness, identical settings, only lora_path differs
+==========================================================================
+  base   ratio = None
+  +LoRA  ratio = 10.509252
+
+  paper (SI Table 6, MeDAL): base 9.08 %  +LoRA 9.06 %  -> paper says BETTER by 0.02 pp
+  prior run in this project: base 11.204097 (8.9253 %) +LoRA 10.509252 (9.5154 %) -> WORSE by 0.5901 pp

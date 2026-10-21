@@ -1,0 +1,64 @@
+==============================================================================
+VERIFICATION 2 - ImageGPT quantisation on the image AND video paths
+==============================================================================
+repo      = <capsule>
+model dir = <capsule>\data\model\imagegpt-small
+
+[preprocessor_config.json, as loaded]
+  do_color_quantize = True
+  do_resize         = True
+  size              = {'height': 32, 'width': 32}
+  n clusters        = 512
+  rescale_factor    = 0.00392156862745098
+  image_mean/std    = (0.5, 0.5, 0.5) / (0.5, 0.5, 0.5)
+
+------------------------------------------------------------------------------
+A) authors' compress_with_igpt.main()  --dataset imagenet   (still images)
+------------------------------------------------------------------------------
+   data_path = <tmp>\verify_img_small  (128x128 crop of the shipped test image)
+   status    = stopped-after-limit
+   | 36it [00:05,  7.87it/s]
+   | 37it [00:05,  8.04it/s]
+   | 38it [00:05,  8.06it/s]
+   | 39it [00:05,  8.04it/s]
+   | 40it [00:05,  8.09it/s]
+   | 40it [00:05,  7.04it/s]
+   ImageGPTImageProcessor calls = 40
+     in [32, 32, 3] uint8 [0.0..23.0] -> out [1, 1024] tokens[59..241] distinct=6 quantize=True
+     in [32, 32, 3] uint8 [0.0..21.0] -> out [1, 1024] tokens[59..241] distinct=6 quantize=True
+     in [32, 32, 3] uint8 [0.0..25.0] -> out [1, 1024] tokens[59..255] distinct=7 quantize=True
+
+------------------------------------------------------------------------------
+B) authors' compress_with_igpt.main()  --dataset raw_video_frames   (video)
+------------------------------------------------------------------------------
+   data_path = <tmp>\verify_video_frames  (PNG frames, the layout
+               utils/preprocess_video_dataset.py:y4m2png produces)
+   status    = stopped-after-limit
+   | 36it [00:05,  5.07it/s]
+   | 37it [00:05,  5.60it/s]
+   | 38it [00:05,  5.83it/s]
+   | 39it [00:05,  5.88it/s]
+   | 40it [00:05,  5.46it/s]
+   | 40it [00:05,  6.73it/s]
+   ImageGPTImageProcessor calls = 40
+     in [32, 32, 3] uint8 [124.0..170.0] -> out [1, 1024] tokens[48..508] distinct=8 quantize=True
+     in [32, 32, 3] uint8 [157.0..179.0] -> out [1, 1024] tokens[48..508] distinct=5 quantize=True
+     in [32, 32, 3] uint8 [99.0..179.0] -> out [1, 1024] tokens[48..508] distinct=13 quantize=True
+
+------------------------------------------------------------------------------
+C) is that processor lossy?  exhaustive 256-value probe
+------------------------------------------------------------------------------
+   256 source values map onto 48 distinct tokens  (208 colliding pairs)
+
+------------------------------------------------------------------------------
+D) other image/video entry points in the same repo
+------------------------------------------------------------------------------
+   compress_with_igpt.py        --dataset imagenet|raw_video_frames -> iGPT (quantised)
+   compress_with_bgpt_or_llama.py --data_type bmp|video|wav         -> bGPT, raw bytes, NO iGPT
+   compress_with_baseline.py    --mode text (accepts .y4m)          -> zstd/zpaq/7z/brotli, NO iGPT
+   run.sh routes ./data/vidoes/{4k,dynamic,static} to compress_with_baseline.py --mode text
+
+==============================================================================
+VERDICT image path  : 40 processor calls  -> QUANTISED
+VERDICT video path  : 40 processor calls  -> QUANTISED
+VERDICT lossiness   : 48/256 values survive -> LOSSY

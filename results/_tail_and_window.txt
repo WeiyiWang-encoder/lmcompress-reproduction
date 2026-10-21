@@ -1,0 +1,32 @@
+===================================================================
+Part 1: full file through the authors' script (expected to FAIL)
+===================================================================
+Script started
+8160
+Working on device cuda:0
+Found 1 files: ['D:\\Document\\capsule-4957991-code\\data\\test_audios\\LJ001-0004.wav']
+  0%|          | 0/1 [00:00<?, ?it/s]100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 1/1 [00:00<00:00, 435.00it/s]
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+Loaded 1 data entries
+Parameter Number: 110084352
+Theoretical compression ratio: 5.016113
+Total size: 82264
+compressed size: 16399.949935913086
+total compression ratio: 5.016113total loss: 12.325943946838379
+time cost 0.8216910362243652
+(exit above is the script's own; a traceback is the expected outcome)
+
+===================================================================
+Part 2: our port on the same single window
+===================================================================
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+payload window = 8160 bytes (LJ001-0004, first context window)
+  n_patches      = 512
+  scored rows    = 8160 (first 0, last 8668)
+  coded bits     = 18414.39
+  bits per byte  = 2.2567
+  compression ratio = 3.545054
+
+  reference script on the same window: ratio 3.666938 = 2.1941 bits/byte
+  our port                            : ratio 3.545054 = 2.2567 bits/byte
+  difference                          : +2.85 %

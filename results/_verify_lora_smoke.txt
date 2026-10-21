@@ -1,0 +1,36 @@
+repo       = <capsule>
+device     = cuda:0  (NVIDIA GeForce RTX 5070)
+vram       = 11.94 GiB
+windows    = 1   arms = ['base', 'lora']
+payload    = 103369 chars  (authors' 'Total size' denominator)
+measuring  = first 1 window(s) = 8192 chars  tokens/window=[1496]
+
+loading base Llama-3-8B exactly as the authors do ...
+  params   = 8.030 B   dtype = torch.bfloat16
+  vram allocated = 14.96 GiB
+  [21s]
+
+--- ARM: base (no adapter) ---
+    window 0: 5856.000 bits over 1495 tokens = 3.917057 bits/token
+  base         bits/token=3.917057  total_bits=5856.0  ratio=11.191257  rate=8.9355%  [96s]
+
+attaching the published adapter exactly as the authors do:
+   PeftModel.from_pretrained(model, lora_path, device_map=self.device)
+  PeftModel ready; 224 LoRA modules found   [1s]
+
+--- ARM: lora_live (delta scale = 1.0, the authors' setting) ---
+    window 0: 5664.000 bits over 1495 tokens = 3.788629 bits/token
+  lora_lam=1.0 bits/token=3.788629  total_bits=5664.0  ratio=11.570621  rate=8.6426%  [102s]
+
+==============================================================================
+SUMMARY (authors' csv path, ctx 8192, first 1 window(s) of medal_102285.csv)
+==============================================================================
+arm                bits/token   total bits      ratio    rate %    vs base
+base                 3.917057       5856.0  11.191257    8.9355    +0.0000
+lora_lam=1.0         3.788629       5664.0  11.570621    8.6426    -0.2930
+
+paper (MeDAL table)  LMCompress* base 9.08 %   LMCompress +LoRA 9.06 %
+      -> the paper says the adapter HELPS by 0.02 pp
+      this run: base 8.9355 %  +LoRA 8.6426 %   -> adapter HELPS by 0.2930 pp
+
+total wall clock 222s

@@ -1,0 +1,43 @@
+==============================================================================
+Cost of making the iGPT image/video path LOSSLESS (side-channel bound)
+==============================================================================
+
+colour map t(v): 256 source values -> 48 tokens
+  per-value map is well defined : True
+  class sizes: 2:1, 3:2, 4:8, 5:11, 6:21, 7:5
+
+validation on a real (32,32,1) chunk from the shipped image:
+  positions 1024, mismatches vs t(v) = 0  -> MATCH
+
+------------------------------------------------------------------------------
+IMAGE (shipped 1714x1142 PNG, all samples)
+------------------------------------------------------------------------------
+  samples                    = 5872164
+  H(V|T)                     = 2.4485 bits/sample
+  side-info lower bound      = 1797216 bytes = 30.6057 % of raw RGB
+  iGPT code (full run)       = 910788 bytes = 15.5103 %
+  => LOSSLESS TOTAL (bound)  = 2708004 bytes = 46.1159 % of raw RGB  (ratio 2.1684x)
+
+------------------------------------------------------------------------------
+VIDEO (real 4096x2160 frames, per frame)
+------------------------------------------------------------------------------
+  frame_000000.png: 26542080 samples, H(V|T)=2.5252 bits/sample, side-info=31.5649 % of raw RGB
+  frame_000001.png: 26542080 samples, H(V|T)=2.5248 bits/sample, side-info=31.5600 % of raw RGB
+  frame_000002.png: 26542080 samples, H(V|T)=2.5250 bits/sample, side-info=31.5623 % of raw RGB
+  mean side-info over 3 frames = 31.5624 % of raw RGB
+
+==============================================================================
+SO WHAT?  (image, % of raw RGB; lower is better)
+==============================================================================
+method                                                        rate
+LMCompress-igpt as shipped (LOSSY)                        15.5103%
+LMCompress-igpt + optimal side channel (LOSSLESS bound)   46.1159%
+LMCompress-bgpt (authors, lossless)                       52.0896%
+WebP lossless (PIL, method 6)                             46.5672%
+JPEG-2000 lossless (PIL)                                  50.2369%
+PNG (PIL optimize, level 9)                               52.0878%
+PNG (ffmpeg, earlier project run)                         84.3809%
+
+Caveat: H(V|T) is a LOWER bound (it assumes the decoder knows the exact
+conditional distribution). A real side channel costs more, so the
+'lossless bound' row is optimistic for the iGPT route.

@@ -1,0 +1,54 @@
+{
+  "images": 5,
+  "units": 39696,
+  "samples": 40648704,
+  "coded_bits": 56326730.146484375,
+  "coded_bytes": 7040841.268310547,
+  "rate_pct": 17.321194959402757,
+  "ratio": 5.773273739737876,
+  "published_rate_pct": 14.62,
+  "convention": "official: compressed bytes / processed source samples, denominator = sum(h*w) over channel-wise 32x32 chunks",
+  "per_image": [
+    {
+      "image": "alberto-montalesi-176097.png",
+      "units": 8178,
+      "samples": 8374272,
+      "coded_bits": 9973740.82421875,
+      "coded_bytes": 1246717.6030273438,
+      "rate_pct": 14.887474433925048
+    },
+    {
+      "image": "alejandro-escamilla-6.png",
+      "units": 8034,
+      "samples": 8226816,
+      "coded_bits": 7984465.765625,
+      "coded_bytes": 998058.220703125,
+      "rate_pct": 12.131767875969572
+    },
+    {
+      "image": "ales-krivec-15949.png",
+      "units": 7128,
+      "samples": 7299072,
+      "coded_bits": 7614759.091796875,
+      "coded_bytes": 951844.8864746094,
+      "rate_pct": 13.040628815205677
+    },
+    {
+      "image": "alexander-shustov-73.png",
+      "units": 8166,
+      "samples": 8361984,
+      "coded_bits": 19189640.1328125,
+      "coded_bytes": 2398705.0166015625,
+      "rate_pct": 28.68583600018324
+    },
+    {
+      "image": "allef-vinicius-109434.png",
+      "units": 8190,
+      "samples": 8386560,
+      "coded_bits": 11564124.33203125,
+      "coded_bytes": 1445515.5415039062,
+      "rate_pct": 17.236096105004986
+    }
+  ],
+  "wall_seconds": 2524.9
+}

@@ -1,0 +1,36 @@
+{"codec": "webp -lossless -q100", "compressed_bytes": 3815646, "height": 1363, "rate_pct": 45.563913, "raw_rgb_bytes": 8374272, "seconds": 7.571, "unit": "alberto-montalesi-176097.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 3916761, "height": 1363, "rate_pct": 46.771361, "raw_rgb_bytes": 8374272, "seconds": 0.838, "unit": "alberto-montalesi-176097.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 7654445, "height": 1363, "rate_pct": 91.404304, "raw_rgb_bytes": 8374272, "seconds": 0.504, "unit": "alberto-montalesi-176097.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 2587988, "height": 1339, "rate_pct": 31.457954, "raw_rgb_bytes": 8226816, "seconds": 10.19, "unit": "alejandro-escamilla-6.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 3444990, "height": 1339, "rate_pct": 41.875131, "raw_rgb_bytes": 8226816, "seconds": 0.952, "unit": "alejandro-escamilla-6.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 5325671, "height": 1339, "rate_pct": 64.735506, "raw_rgb_bytes": 8226816, "seconds": 0.523, "unit": "alejandro-escamilla-6.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 2431720, "height": 1188, "rate_pct": 33.315468, "raw_rgb_bytes": 7299072, "seconds": 29.528, "unit": "ales-krivec-15949.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 2926576, "height": 1188, "rate_pct": 40.095179, "raw_rgb_bytes": 7299072, "seconds": 0.648, "unit": "ales-krivec-15949.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 6298713, "height": 1188, "rate_pct": 86.29471, "raw_rgb_bytes": 7299072, "seconds": 0.38, "unit": "ales-krivec-15949.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 4226576, "height": 1361, "rate_pct": 50.545134, "raw_rgb_bytes": 8361984, "seconds": 8.213, "unit": "alexander-shustov-73.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 5603032, "height": 1361, "rate_pct": 67.006012, "raw_rgb_bytes": 8361984, "seconds": 1.063, "unit": "alexander-shustov-73.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 7600719, "height": 1361, "rate_pct": 90.89612, "raw_rgb_bytes": 8361984, "seconds": 0.465, "unit": "alexander-shustov-73.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 3090394, "height": 1365, "rate_pct": 36.849364, "raw_rgb_bytes": 8386560, "seconds": 9.63, "unit": "allef-vinicius-109434.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 4511973, "height": 1365, "rate_pct": 53.800044, "raw_rgb_bytes": 8386560, "seconds": 0.903, "unit": "allef-vinicius-109434.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 6168812, "height": 1365, "rate_pct": 73.555928, "raw_rgb_bytes": 8386560, "seconds": 0.472, "unit": "allef-vinicius-109434.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 1618828, "height": 915, "rate_pct": 36.135844, "raw_rgb_bytes": 4479840, "seconds": 11.22, "unit": "amy-zhang-15940.png", "width": 1632}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 2312744, "height": 915, "rate_pct": 51.625594, "raw_rgb_bytes": 4479840, "seconds": 0.504, "unit": "amy-zhang-15940.png", "width": 1632}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 2895152, "height": 915, "rate_pct": 64.626237, "raw_rgb_bytes": 4479840, "seconds": 0.327, "unit": "amy-zhang-15940.png", "width": 1632}
+{"codec": "webp -lossless -q100", "compressed_bytes": 3219966, "height": 1361, "rate_pct": 38.507201, "raw_rgb_bytes": 8361984, "seconds": 9.421, "unit": "andrew-ruiz-376.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 4035078, "height": 1361, "rate_pct": 48.255031, "raw_rgb_bytes": 8361984, "seconds": 0.858, "unit": "andrew-ruiz-376.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 6903515, "height": 1361, "rate_pct": 82.558338, "raw_rgb_bytes": 8361984, "seconds": 0.459, "unit": "andrew-ruiz-376.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 3356836, "height": 1365, "rate_pct": 40.026376, "raw_rgb_bytes": 8386560, "seconds": 8.62, "unit": "benjamin-sloth-lindgreen-705.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 4393490, "height": 1365, "rate_pct": 52.387272, "raw_rgb_bytes": 8386560, "seconds": 0.884, "unit": "benjamin-sloth-lindgreen-705.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 6045912, "height": 1365, "rate_pct": 72.090488, "raw_rgb_bytes": 8386560, "seconds": 0.44, "unit": "benjamin-sloth-lindgreen-705.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 3272864, "height": 1360, "rate_pct": 39.168581, "raw_rgb_bytes": 8355840, "seconds": 7.659, "unit": "casey-fyfe-999.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 4487447, "height": 1360, "rate_pct": 53.704319, "raw_rgb_bytes": 8355840, "seconds": 0.882, "unit": "casey-fyfe-999.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 5743143, "height": 1360, "rate_pct": 68.732084, "raw_rgb_bytes": 8355840, "seconds": 0.464, "unit": "casey-fyfe-999.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 3712116, "height": 1365, "rate_pct": 44.262677, "raw_rgb_bytes": 8386560, "seconds": 8.953, "unit": "clem-onojeghuo-33741.png", "width": 2048}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 4101594, "height": 1365, "rate_pct": 48.906751, "raw_rgb_bytes": 8386560, "seconds": 0.854, "unit": "clem-onojeghuo-33741.png", "width": 2048}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 6922357, "height": 1365, "rate_pct": 82.541078, "raw_rgb_bytes": 8386560, "seconds": 0.43, "unit": "clem-onojeghuo-33741.png", "width": 2048}
+{"codec": "webp -lossless -q100", "compressed_bytes": 1720804, "height": 844, "rate_pct": 45.308162, "raw_rgb_bytes": 3798000, "seconds": 8.0, "unit": "daniel-robert-405.png", "width": 1500}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 2388922, "height": 844, "rate_pct": 62.899473, "raw_rgb_bytes": 3798000, "seconds": 0.503, "unit": "daniel-robert-405.png", "width": 1500}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 3121833, "height": 844, "rate_pct": 82.196761, "raw_rgb_bytes": 3798000, "seconds": 0.25, "unit": "daniel-robert-405.png", "width": 1500}
+{"codec": "webp -lossless -q100", "compressed_bytes": 2354610, "height": 1292, "rate_pct": 31.233137, "raw_rgb_bytes": 7538820, "seconds": 22.127, "unit": "davide-ragusa-716.png", "width": 1945}
+{"codec": "jpeg-2000 lossless", "compressed_bytes": 3048569, "height": 1292, "rate_pct": 40.438278, "raw_rgb_bytes": 7538820, "seconds": 0.657, "unit": "davide-ragusa-716.png", "width": 1945}
+{"codec": "png (ffmpeg, cl 100)", "compressed_bytes": 4449525, "height": 1292, "rate_pct": 59.021505, "raw_rgb_bytes": 7538820, "seconds": 0.432, "unit": "davide-ragusa-716.png", "width": 1945}

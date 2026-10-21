@@ -1,0 +1,154 @@
+{
+  "base_model": "meta-llama/Meta-Llama-3-8B",
+  "adapter_params": 20971520,
+  "corpus_files": [
+    "medal_102285.csv",
+    "medal_103851.csv",
+    "medal_108122.csv"
+  ],
+  "corpus_bytes": 312053,
+  "cells": [
+    {
+      "arm": "base",
+      "axis": "A_chars",
+      "ctx": 4096,
+      "bits": 163071.01043701172,
+      "windows": 78,
+      "mean_window_tokens": 739.1,
+      "rate_pct": 6.532184053550668,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 17.57,
+      "seconds": 9.1
+    },
+    {
+      "arm": "base",
+      "axis": "A_chars",
+      "ctx": 6144,
+      "bits": 159590.09765625,
+      "windows": 51,
+      "mean_window_tokens": 1129.5,
+      "rate_pct": 6.392748093122402,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 18.09,
+      "seconds": 7.3
+    },
+    {
+      "arm": "base",
+      "axis": "A_chars",
+      "ctx": 8192,
+      "bits": 158075.93310546875,
+      "windows": 39,
+      "mean_window_tokens": 1476.8,
+      "rate_pct": 6.332094752552802,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 18.49,
+      "seconds": 6.6
+    },
+    {
+      "arm": "base",
+      "axis": "B_tokens",
+      "ctx": 4096,
+      "bits": 153921.6865234375,
+      "windows": 15,
+      "mean_window_tokens": 3836.5,
+      "rate_pct": 6.165686859421216,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 19.46,
+      "seconds": 5.5
+    },
+    {
+      "arm": "base",
+      "axis": "B_tokens",
+      "ctx": 8192,
+      "bits": 152338.19580078125,
+      "windows": 9,
+      "mean_window_tokens": 6394.1,
+      "rate_pct": 6.102256499728462,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 20.44,
+      "seconds": 5.4
+    },
+    {
+      "arm": "+LoRA",
+      "axis": "A_chars",
+      "ctx": 4096,
+      "bits": 173050.31170654297,
+      "windows": 78,
+      "mean_window_tokens": 739.1,
+      "rate_pct": 6.931927897926913,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 17.57,
+      "seconds": 8.5
+    },
+    {
+      "arm": "+LoRA",
+      "axis": "A_chars",
+      "ctx": 6144,
+      "bits": 169652.49560546875,
+      "windows": 51,
+      "mean_window_tokens": 1129.5,
+      "rate_pct": 6.795820565956294,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 18.09,
+      "seconds": 7.9
+    },
+    {
+      "arm": "+LoRA",
+      "axis": "A_chars",
+      "ctx": 8192,
+      "bits": 168029.26538085938,
+      "windows": 39,
+      "mean_window_tokens": 1476.8,
+      "rate_pct": 6.730798349193061,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 18.49,
+      "seconds": 7.6
+    },
+    {
+      "arm": "+LoRA",
+      "axis": "B_tokens",
+      "ctx": 4096,
+      "bits": 165031.32250976562,
+      "windows": 15,
+      "mean_window_tokens": 3836.5,
+      "rate_pct": 6.610708858341597,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 19.46,
+      "seconds": 7.3
+    },
+    {
+      "arm": "+LoRA",
+      "axis": "B_tokens",
+      "ctx": 8192,
+      "bits": 164141.76635742188,
+      "windows": 9,
+      "mean_window_tokens": 6394.1,
+      "rate_pct": 6.575075642495901,
+      "dtype": "torch.bfloat16",
+      "peak_vram_gib": 20.44,
+      "seconds": 7.4
+    }
+  ],
+  "penalties": {
+    "A_chars@4096": 0.399744,
+    "A_chars@6144": 0.403072,
+    "A_chars@8192": 0.398704,
+    "B_tokens@4096": 0.445022,
+    "B_tokens@8192": 0.472819
+  },
+  "published_table9": {
+    "ctx8192": 9.06,
+    "ctx6144": 9.16,
+    "ctx4096": 9.36
+  },
+  "authors_harness": {
+    "base_8192chars": 8.9253,
+    "lora_8192chars": 9.5154
+  },
+  "our_port": {
+    "base_4096tokens": 9.041,
+    "lora_4096tokens": 9.3529
+  },
+  "window_units": "Axis A windows the text by CHARACTERS, matching the reference implementation's split() on a string; Axis B windows by tokens, matching our port",
+  "note": "reported rate is sum(-log2 p_true) on the model float32 probabilities; the arithmetic coder is not run because it cannot change the reported rate; the base arm uses disable_adapter() on the same PeftModel so the weights are identical between arms"
+}

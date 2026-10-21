@@ -1,0 +1,54 @@
+{
+  "clip": "https://media.xiph.org/video/derf/y4m/Netflix_Aerial_4096x2160_60fps_8bit_420.y4m",
+  "width": 4096,
+  "height": 2160,
+  "fps": "60/1",
+  "frames": 10,
+  "units_per_frame": 25920,
+  "samples_per_frame": 26542080,
+  "coded_bits": 385407242.7207031,
+  "coded_bytes": 48175905.34008789,
+  "rate_pct_official": 18.15076487603379,
+  "rate_pct_rgb": 18.15076487603379,
+  "published_rate_pct": 15.31,
+  "per_frame": [
+    18.14675044958238,
+    18.14675044958238,
+    18.139455507015004,
+    18.149233557007932,
+    18.144942144920797,
+    18.158239369959006,
+    18.150622061005347,
+    18.16137036975519,
+    18.155307525102003,
+    18.154977326407845
+  ],
+  "baselines": [
+    {
+      "codec": "H.265 crf 0 (x265 veryslow)",
+      "bytes": 35124565,
+      "rate_pct": 26.46707793812693,
+      "seconds": 154.4
+    },
+    {
+      "codec": "H.264 crf 0 (x264 veryslow)",
+      "bytes": 45236644,
+      "rate_pct": 34.08673623167438,
+      "seconds": 5.5
+    },
+    {
+      "codec": "FFV1 level 3",
+      "bytes": 53234817,
+      "rate_pct": 40.113523130063655,
+      "seconds": 1.8
+    },
+    {
+      "codec": "zstd --ultra -22 (raw YUV)",
+      "bytes": 61434434,
+      "rate_pct": 46.29210220148534,
+      "seconds": 119.1
+    }
+  ],
+  "model_id": "openai/imagegpt-small",
+  "note": "channel-wise tokenisation per the official loader; reported length is sum(-log2 p_true) on the model float32 probabilities; arithmetic coder skipped because it cannot change the reported rate"
+}

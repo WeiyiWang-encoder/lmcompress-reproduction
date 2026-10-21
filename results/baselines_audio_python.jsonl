@@ -1,0 +1,4 @@
+{"codec": "zlib 9", "compressed_bytes": 39798, "compression_rate_pct": 48.378392, "compression_ratio": 2.067039, "original_bytes": 82264, "seconds": 0.02, "unit": "LJ001-0004.wav"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 34272, "compression_rate_pct": 41.660994, "compression_ratio": 2.400327, "original_bytes": 82264, "seconds": 0.039, "unit": "LJ001-0004.wav"}
+{"codec": "brotli q11", "compressed_bytes": 34440, "compression_rate_pct": 41.865214, "compression_ratio": 2.388618, "original_bytes": 82264, "seconds": 0.124, "unit": "LJ001-0004.wav"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 37631, "compression_rate_pct": 45.744189, "compression_ratio": 2.18607, "original_bytes": 82264, "seconds": 0.027, "unit": "LJ001-0004.wav"}

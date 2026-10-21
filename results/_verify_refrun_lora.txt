@@ -1,0 +1,25 @@
+# authors' compress_with_llm, arm=+ the authors' published LoRA
+# data_path=<repo>\artifacts\task1_one  data_type=csv  model_path=<capsule>\data\model\finetuned_llama\Llama-3-8B
+# lora_path=<capsule>\data\model\finetuned_llama\Llama-3-8B_lora  context_window=8192  batch_size=1
+# wall_clock=2779.1s  error=None
+
+8192
+Working on device cuda:0
+Found 1 files: ['D:\\Document\\capsule-4957991-code\\repro_understanding_is_compression\\artifacts\\task1_one\\medal_102285.csv']
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+
+  0%|          | 0/89 [00:00<?, ?it/s][A
+100%|##########| 89/89 [00:00<00:00, 22214.54it/s]
+
+100%|##########| 1/1 [00:00<00:00, 90.86it/s]
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 291/291 [00:00<00:00, 2995.14it/s]
+Could not find the bitsandbytes CUDA binary at WindowsPath('<capsule>/.venv/Lib/site-packages/bitsandbytes/libbitsandbytes_cuda128.dll')
+The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+Theoretical compression ratio: 10.509252
+Total size: 103369
+compressed size: 9836.0
+total compression ratio: 10.509252total loss: 0
+time cost 2758.587637424469

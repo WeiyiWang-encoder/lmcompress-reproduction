@@ -1,0 +1,3 @@
+{"codec": "flac -compression_level 12", "compressed_bytes": 37274, "compression_rate_pct": 45.334468, "compression_ratio": 2.205827, "original_bytes": 82220, "seconds": 0.093, "unit": "LJ001-0004.wav"}
+{"codec": "wavpack -hh -x3", "compressed_bytes": 29026, "compression_rate_pct": 35.302846, "compression_ratio": 2.832633, "original_bytes": 82220, "seconds": 0.075, "unit": "LJ001-0004.wav"}
+{"codec": "optimfrog --preset max", "compressed_bytes": 22455, "compression_rate_pct": 27.310873, "compression_ratio": 3.661545, "original_bytes": 82220, "seconds": 0.204, "unit": "LJ001-0004.wav"}

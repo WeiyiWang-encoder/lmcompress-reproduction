@@ -1,0 +1,49 @@
+==============================================================================
+What rate does the authors' OWN video path produce?
+==============================================================================
+device forced to CPU (language_model.device patched)
+chunks per run = 150
+
+------------------------------------------------------------------------------
+1) IMAGE path (--dataset imagenet) on the SHIPPED full-resolution PNG
+------------------------------------------------------------------------------
+   status = stopped-after-limit   shapes seen = ['(32, 32, 1)']
+   chunks = 150   coded bytes = 30564   [224s]
+   bytes/chunk = 203.7600
+   known FULL-run value (all 5733 chunks) = 158.8676
+   estimator error = +28.26 %
+   implied rate on the shipped image = 19.8984 %
+   [paper SI Table 3, CLIC2019, LMCompress-igpt = 14.62 %]
+
+------------------------------------------------------------------------------
+2) VIDEO path (--dataset raw_video_frames) on real 4K PNG frames
+------------------------------------------------------------------------------
+   frames supplied = 4  (4096x2160, real clip)
+   status = stopped-after-limit   shapes seen = ['(32, 32, 1)']
+   chunks = 150   coded bytes = 13073   [220s]
+   bytes/chunk = 87.1533
+   rate (paper convention, bytes/(chunks*1024)) = 8.5111 %
+
+   chunks per frame  = 3 channels x 8640 = 25920
+   per-frame samples = 26542080  (= 3 x 8847360 pixels = 26542080)
+   whole clip (60 frames) = 1555200 chunks, denominator 1592524800 samples
+   estimated code size for the clip = 135.5 MB
+   [paper SI Table 4, high-resolution video, LMCompress-igpt = 15.31 %]
+
+------------------------------------------------------------------------------
+3) contrast with the whole-frame convention used earlier in this project
+------------------------------------------------------------------------------
+   earlier run (tools/run_video_igpt.py): ONE 32x32 grid per frame
+     -> 1024 tokens/frame, denominator 8847360 pixels/frame,
+        reported rate 0.004200 %
+   authors' loader: 25920 chunks/frame (25920x more tokens)
+   -> the two are different objects; the 0.0042 % figure is not the
+      authors' video path.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  image  bytes/chunk  203.7600  -> rate  19.8984 %   (paper 14.62 %)
+  video  bytes/chunk   87.1533  -> rate   8.5111 %   (paper 15.31 %)
+  both paths reach ImageGPTImageProcessor with do_color_quantize=True
+  video chunks/frame = 25920 (channel-wise raster segments)

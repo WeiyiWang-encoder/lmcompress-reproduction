@@ -1,0 +1,23 @@
+# authors' compress_with_llm, arm=base llama-3-8B, no adapter
+# data_path=<repo>\artifacts\task1_one  data_type=csv  model_path=<capsule>\data\model\finetuned_llama\Llama-3-8B
+# lora_path=None  context_window=8192  batch_size=1
+# wall_clock=1398.8s  error=None
+
+8192
+Working on device cuda:0
+Found 1 files: ['D:\\Document\\capsule-4957991-code\\repro_understanding_is_compression\\artifacts\\task1_one\\medal_102285.csv']
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+
+  0%|          | 0/89 [00:00<?, ?it/s][A
+100%|##########| 89/89 [00:00<00:00, 44753.99it/s]
+
+100%|##########| 1/1 [00:00<00:00, 99.94it/s]
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 291/291 [00:00<00:00, 4756.04it/s]
+Theoretical compression ratio: 11.204097
+Total size: 103369
+compressed size: 9226.0
+total compression ratio: 11.204097total loss: 0
+time cost 1379.2287950515747

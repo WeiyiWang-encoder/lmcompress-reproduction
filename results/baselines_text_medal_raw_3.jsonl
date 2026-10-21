@@ -1,0 +1,12 @@
+{"codec": "zlib 9", "compressed_bytes": 35662, "compression_rate_pct": 34.444723, "compression_ratio": 2.903202, "original_bytes": 103534, "seconds": 0.006, "unit": "medal_102285.txt"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 32328, "compression_rate_pct": 31.224525, "compression_ratio": 3.202611, "original_bytes": 103534, "seconds": 0.036, "unit": "medal_102285.txt"}
+{"codec": "brotli q11", "compressed_bytes": 29490, "compression_rate_pct": 28.483397, "compression_ratio": 3.510817, "original_bytes": 103534, "seconds": 0.117, "unit": "medal_102285.txt"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 32467, "compression_rate_pct": 31.358781, "compression_ratio": 3.188899, "original_bytes": 103534, "seconds": 0.029, "unit": "medal_102285.txt"}
+{"codec": "zlib 9", "compressed_bytes": 36683, "compression_rate_pct": 35.159874, "compression_ratio": 2.844151, "original_bytes": 104332, "seconds": 0.006, "unit": "medal_103851.txt"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33356, "compression_rate_pct": 31.971016, "compression_ratio": 3.127833, "original_bytes": 104332, "seconds": 0.036, "unit": "medal_103851.txt"}
+{"codec": "brotli q11", "compressed_bytes": 30128, "compression_rate_pct": 28.877046, "compression_ratio": 3.462958, "original_bytes": 104332, "seconds": 0.122, "unit": "medal_103851.txt"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33501, "compression_rate_pct": 32.109995, "compression_ratio": 3.114295, "original_bytes": 104332, "seconds": 0.032, "unit": "medal_103851.txt"}
+{"codec": "zlib 9", "compressed_bytes": 35852, "compression_rate_pct": 34.411203, "compression_ratio": 2.90603, "original_bytes": 104187, "seconds": 0.007, "unit": "medal_108122.txt"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 32692, "compression_rate_pct": 31.378195, "compression_ratio": 3.186926, "original_bytes": 104187, "seconds": 0.037, "unit": "medal_108122.txt"}
+{"codec": "brotli q11", "compressed_bytes": 29853, "compression_rate_pct": 28.653287, "compression_ratio": 3.490001, "original_bytes": 104187, "seconds": 0.172, "unit": "medal_108122.txt"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 32794, "compression_rate_pct": 31.476096, "compression_ratio": 3.177014, "original_bytes": 104187, "seconds": 0.033, "unit": "medal_108122.txt"}

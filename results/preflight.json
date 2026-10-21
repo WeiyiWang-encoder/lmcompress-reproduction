@@ -1,0 +1,160 @@
+{
+  "when": "2026-10-05 13:22:25",
+  "repo_root": "D:\\Document\\capsule-4957991-code",
+  "environment": [
+    {
+      "check": "python",
+      "ok": true,
+      "detail": "3.11.15"
+    },
+    {
+      "check": "torch",
+      "ok": true,
+      "detail": "2.11.0+cu128"
+    },
+    {
+      "check": "cuda",
+      "ok": true,
+      "detail": {
+        "device": "NVIDIA GeForce RTX 5070",
+        "capability": [
+          12,
+          0
+        ],
+        "total_gb": 12.82
+      }
+    },
+    {
+      "check": "bitsandbytes",
+      "ok": true,
+      "detail": "0.50.2"
+    },
+    {
+      "check": "transformers",
+      "ok": true,
+      "detail": "5.5.3"
+    },
+    {
+      "check": "peft",
+      "ok": true,
+      "detail": "0.21.2"
+    },
+    {
+      "check": "accelerate",
+      "ok": true,
+      "detail": "1.15.0"
+    },
+    {
+      "check": "pandas",
+      "ok": true,
+      "detail": "3.0.2"
+    },
+    {
+      "check": "numpy",
+      "ok": true,
+      "detail": "1.26.4"
+    }
+  ],
+  "assets": [
+    {
+      "check": "asset:bgpt-audio",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\model\\bgpt\\weights-audio.pth",
+        "bytes": 1324403545
+      }
+    },
+    {
+      "check": "asset:bgpt-image",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\model\\bgpt\\weights-image.pth",
+        "bytes": 1324403545
+      }
+    },
+    {
+      "check": "asset:bgpt-text",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\model\\bgpt\\weights-text.pth",
+        "bytes": 1324402756
+      }
+    },
+    {
+      "check": "asset:imagegpt-small",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\model\\imagegpt-small",
+        "bytes": 306805346
+      }
+    },
+    {
+      "check": "asset:llama-3-8b",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\model\\finetuned_llama\\Llama-3-8B",
+        "bytes": 16069766580
+      }
+    },
+    {
+      "check": "asset:llama-lora",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\model\\finetuned_llama\\Llama-3-8B_lora",
+        "bytes": 350904948
+      }
+    },
+    {
+      "check": "asset:audio-sample",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\test_audios",
+        "bytes": 82264
+      }
+    },
+    {
+      "check": "asset:image-sample",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\test_images",
+        "bytes": 3058683
+      }
+    },
+    {
+      "check": "asset:video-sample",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\test_videos",
+        "bytes": 796262820
+      }
+    },
+    {
+      "check": "asset:text-medal",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\text\\MEDAL_sample",
+        "bytes": 10350363
+      }
+    },
+    {
+      "check": "asset:text-eurlex",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Document\\capsule-4957991-code\\data\\text\\EURLEX_sample",
+        "bytes": 13414965
+      }
+    },
+    {
+      "check": "ffmpeg",
+      "ok": false,
+      "detail": {
+        "available": false,
+        "error": "ffmpeg not found: looked in third_party/ and on PATH. Video frame extraction needs it."
+      }
+    }
+  ],
+  "bad": [
+    "ffmpeg"
+  ],
+  "seconds": 8.55
+}

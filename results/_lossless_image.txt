@@ -1,0 +1,79 @@
+==============================================================================
+Is the paper's image method lossless?  And what is the right lossless test?
+==============================================================================
+
+test image : 0a8ea388b5df64e6337d65e65e7d5d55d74abbf5.png
+             1714 x 1142 RGB, raw = 5872164 bytes
+
+------------------------------------------------------------------------------
+A) What does the iGPT path actually put into the arithmetic coder?
+------------------------------------------------------------------------------
+   language_model.compress, the encode call(s):
+     encoder.encode(normalize_pdf_for_arithmetic_coding(pdf), symbol)
+     encoder.encode(normalize_pdf_for_arithmetic_coding(pdf), symbol)
+   where `symbol` comes from:
+     sequence_array = data
+     previous_array, sequence_array = data
+     sequence_array = tokenizer(data, return_tensors='pt')['input_ids'].to(device)
+     sequence_array = image_processor(sequence_array, return_tensors='pt').to(device)['input_ids']
+     sequence_array = np.repeat(sequence_array, 3, axis=2)
+     sequence_array = image_processor(sequence_array, return_tensors='pt').to(device)['input_ids'].to(torch.int64)
+     sequence_array = sequence_array.detach().view(-1).cpu().numpy().squeeze()
+     symbols.append(symbol)
+     correct_symbols.append(symbol)
+
+   `sequence_array` is the ImageGPT processor output (token ids), and the
+   coder emits exactly that id -- there is no residual / side channel.
+   The quantiser is non-injective (256 -> 48 ids, 585 colliding pairs),
+   so no decoder can invert it.  => the image and video paths are LOSSY.
+   (Text uses Llama token ids = the paper's own unit; audio uses raw bytes
+    via bGPT -> those two ARE lossless by construction.)
+
+------------------------------------------------------------------------------
+B) The authors' own LOSSLESS image path: bGPT over raw bytes
+------------------------------------------------------------------------------
+   prepared <repo>\artifacts\lossless_img\test_image.bmp
+   BMP size = 5874502 bytes  (header 2338 B, no row padding)
+   command equivalent: compress_with_bgpt_or_llama.py --data_type bmp --model_path weights-image.pth --context_window 8160 --batch_size 1
+   running (authors' unmodified code) ...
+   status   : ok
+     | Parameter Number: 110084352
+     | Theoretical compression ratio: 1.920533
+     | Total size: 5874502
+     | compressed size: 3058787.8376464844
+     | total compression ratio: 1.920533total loss: 2087.353515625
+     | time cost 35.697954416275024
+   bGPT code size        = 3058787.8 B
+   rate vs BMP file      = 52.0689 %   (harness ratio 1.920533)
+   rate vs raw RGB bytes = 52.0896 %
+   ratio vs raw RGB      = 1.9198x
+   wall clock            = 38s
+
+------------------------------------------------------------------------------
+C) Classical LOSSLESS image codecs, identical pixels
+------------------------------------------------------------------------------
+codec                         bytes   rate vs raw RGB     ratio
+png                         3058683          52.0878%    1.9198
+webp_lossless               2734500          46.5672%    2.1474
+jpeg2000_lossless           2949996          50.2369%    1.9906
+jpegxl_lossless                  --       unsupported        --
+tiff_deflate                4985826          84.9061%    1.1778
+brotli_q11_raw              3899758          66.4109%    1.5058
+
+==============================================================================
+COMPARISON (denominator = raw RGB bytes = 5872164)
+==============================================================================
+method                                          bytes      rate
+webp_lossless                                 2734500  46.5672%
+jpeg2000_lossless                             2949996  50.2369%
+png                                           3058683  52.0878%
+LMCompress-bgpt (authors, lossless)           3058788  52.0896%
+brotli_q11_raw                                3899758  66.4109%
+tiff_deflate                                  4985826  84.9061%
+
+reference (paper, CLIC2019, SI Table 3):
+   LMCompress-igpt 14.62 %  (LOSSY - cannot be compared with these)
+   LMCompress-bgpt 28.57 %  (lossless)
+   PNG 47.08 %   JPEG-XL 31.16 %   WebP 35.56 %   JPEG-2000 48.64 %
+...but this capsule's test image is a 4K aerial detail crop, much harder
+   than CLIC2019 (PNG measures ~84 % here vs 47 % there).

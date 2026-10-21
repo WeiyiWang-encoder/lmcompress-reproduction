@@ -1,0 +1,56 @@
+# --- large, licensed, or regenerable -------------------------------------
+# Datasets, model weights and the authors' capsule are never committed.
+capsule-4957991-code/
+data/*
+# ...except the note explaining where the data comes from
+!data/README.md
+artifacts/
+runs/
+logs/
+scratch/
+replacement_modules/
+
+# Colab bundle of the capsule's source (do not redistribute)
+colab/*.zip
+
+# internal report drafts and rendered QA sheets
+report/capstone/
+
+# --- python --------------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- latex ---------------------------------------------------------------
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+report/_*.tex
+report/_*.pdf
+
+# --- editors / OS --------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- secrets -------------------------------------------------------------
+.env
+*.pem
+hf_token*

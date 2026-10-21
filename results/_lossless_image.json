@@ -1,0 +1,92 @@
+{
+  "image": {
+    "file": "0a8ea388b5df64e6337d65e65e7d5d55d74abbf5.png",
+    "width": 1714,
+    "height": 1142,
+    "raw_rgb_bytes": 5872164,
+    "bmp_bytes": 5874502
+  },
+  "bgpt": {
+    "params": 110084352,
+    "total_size": 5874502,
+    "compressed_size": 3058787.8376464844,
+    "ratio": 1.920533,
+    "secs": 38.39990592002869,
+    "error": null,
+    "stdout_tail": [
+      "Parameter Number: 110084352",
+      "Theoretical compression ratio: 1.920533",
+      "Total size: 5874502",
+      "compressed size: 3058787.8376464844",
+      "total compression ratio: 1.920533total loss: 2087.353515625",
+      "time cost 35.697954416275024"
+    ]
+  },
+  "classical": {
+    "png": {
+      "bytes": 3058683,
+      "rate_pct_raw_rgb": 52.087833377950616,
+      "ratio": 1.9198341246869977,
+      "secs": 0.6298825740814209
+    },
+    "webp_lossless": {
+      "bytes": 2734500,
+      "rate_pct_raw_rgb": 46.56715990902161,
+      "ratio": 2.1474360943499726,
+      "secs": 20.65371060371399
+    },
+    "jpeg2000_lossless": {
+      "bytes": 2949996,
+      "rate_pct_raw_rgb": 50.236948423102625,
+      "ratio": 1.9905667668701923,
+      "secs": 0.574458122253418
+    },
+    "jpegxl_lossless": {
+      "error": "KeyError: 'JXL'"
+    },
+    "tiff_deflate": {
+      "bytes": 4985826,
+      "rate_pct_raw_rgb": 84.90610957050927,
+      "ratio": 1.1777715467808143,
+      "secs": 0.1435234546661377
+    },
+    "brotli_q11_raw": {
+      "bytes": 3899758,
+      "rate_pct_raw_rgb": 66.41091767872967,
+      "ratio": 1.505776512286147
+    },
+    "_raw_rgb_bytes": 5872164
+  },
+  "comparison": [
+    {
+      "method": "webp_lossless",
+      "bytes": 2734500,
+      "rate_pct_raw_rgb": 46.56715990902161
+    },
+    {
+      "method": "jpeg2000_lossless",
+      "bytes": 2949996,
+      "rate_pct_raw_rgb": 50.236948423102625
+    },
+    {
+      "method": "png",
+      "bytes": 3058683,
+      "rate_pct_raw_rgb": 52.087833377950616
+    },
+    {
+      "method": "LMCompress-bgpt (authors, lossless)",
+      "bytes": 3058787.8376464844,
+      "rate_pct_raw_rgb": 52.089618710350805
+    },
+    {
+      "method": "brotli_q11_raw",
+      "bytes": 3899758,
+      "rate_pct_raw_rgb": 66.41091767872967
+    },
+    {
+      "method": "tiff_deflate",
+      "bytes": 4985826,
+      "rate_pct_raw_rgb": 84.90610957050927
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Normalise line endings so a Windows checkout and a Linux clone agree.
+* text=auto eol=lf
+
+# Shell scripts must keep LF or the shebang breaks.
+*.sh text eol=lf
+
+# Binary-ish artefacts: never touch
+*.pdf binary
+*.png binary
+*.ipynb text eol=lf
+
+# GitHub language detection
+*.tex linguist-documentation
+docs/* linguist-documentation
+report/* linguist-documentation
+results/* linguist-documentation

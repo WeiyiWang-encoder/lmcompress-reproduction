@@ -1,0 +1,21 @@
+workdir <tmp>
+--- step 1: ffmpeg rawvideo export ---
+ffmpeg exit=0
+total 777612
+drwx------ 2 wwy  wwy       4096 Oct  6 15:39 .
+drwxrwxrwt 8 root root      4096 Oct  6 15:39 ..
+-rw-r--r-- 1 wwy  wwy  796262820 Oct  6 15:39 raw.yuv
+--- step 2: zstd ---
+zstd: can't stat <tmp>/raw.yuv : No such file or directory -- ignored 
+zstd exit=1
+total 777612
+drwx------ 2 wwy  wwy       4096 Oct  6 15:39 .
+drwxrwxrwt 8 root root      4096 Oct  6 15:39 ..
+-rw-r--r-- 1 wwy  wwy  796262820 Oct  6 15:39 raw.yuv
+--- step 3: compare with plain zstd on the original .y4m for sanity ---
+zstd: can't stat <capsule>/data/test_videos/4k_aerial_first_second.y4m : No such file or directory -- ignored 
+exit=0
+total 777612
+drwx------ 2 wwy  wwy       4096 Oct  6 15:39 .
+drwxrwxrwt 8 root root      4096 Oct  6 15:39 ..
+-rw-r--r-- 1 wwy  wwy  796262820 Oct  6 15:39 raw.yuv

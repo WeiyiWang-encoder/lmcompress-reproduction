@@ -1,0 +1,33 @@
+Independent re-run of the AUTHORS' harness (one process, both arms)
+  repo         = <capsule>
+  test file    = medal_102285.csv  (103886 container bytes)
+  data_path    = <repo>\artifacts\task1_one
+  model_path   = <capsule>\data\model\finetuned_llama\Llama-3-8B
+  lora_path    = <capsule>\data\model\finetuned_llama\Llama-3-8B_lora
+  context      = 8192   batch_size = 1
+  device       = cuda:0 NVIDIA GeForce RTX 5070
+
+==========================================================================
+ARM: base llama-3-8B, no adapter   lora_path=None
+==========================================================================
+   | Theoretical compression ratio: 11.204097
+   | Total size: 103369
+   | compressed size: 9226.0
+   | total compression ratio: 11.204097total loss: 0
+   | time cost 1379.2287950515747
+   -> ratio = 11.204097   [1399s]   raw stdout -> <repo>\results\_verify_refrun_base.txt
+
+==========================================================================
+ARM: + the authors' published LoRA   lora_path=<capsule>\data\model\finetuned_llama\Llama-3-8B_lora
+==========================================================================
+   !! error: OSError: 页面文件太小，无法完成操作。 (os error 1455)
+   -> ratio = None   [2s]   raw stdout -> <repo>\results\_verify_refrun_lora.txt
+
+==========================================================================
+RESULT - authors' own harness, identical settings, only lora_path differs
+==========================================================================
+  base   ratio = 11.204097
+  +LoRA  ratio = None
+
+  paper (MeDAL): base 9.08 %  +LoRA 9.06 %  -> paper says BETTER by 0.02 pp
+  prior run in this project: base 11.204097 (8.9253 %) +LoRA 10.509252 (9.5154 %) -> WORSE by 0.5901 pp

@@ -1,0 +1,28 @@
+# Core dependencies.
+# Versions are floors, not pins: the reproduction was developed against
+# torch 2.x, transformers 4.4x and peft 0.1x. Pin them yourself if you need
+# byte-identical reruns.
+
+torch>=2.1
+numpy>=1.24
+pandas>=2.0
+pillow>=10.0
+
+# Predictors
+transformers>=4.43
+peft>=0.11
+safetensors>=0.4
+
+# Classical baselines that have a Python implementation here
+brotli>=1.1
+zstandard>=0.22
+
+# Figures and the report
+matplotlib>=3.7
+
+# Optional ---------------------------------------------------------------
+# 8-bit / 4-bit quantisation (needs a CUDA-capable bitsandbytes; unavailable
+# on some platforms, in which case the code falls back to bf16 or CPU)
+#   bitsandbytes>=0.43
+# Page counting for the report chapter-length check
+#   pypdf>=4.0

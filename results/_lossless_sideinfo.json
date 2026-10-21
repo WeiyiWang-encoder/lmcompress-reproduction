@@ -1,0 +1,82 @@
+{
+  "map": {
+    "distinct_tokens": 48,
+    "per_value_map_well_defined": true
+  },
+  "validation": {
+    "chunk_shape": [
+      32,
+      32,
+      1
+    ],
+    "n_positions": 1024,
+    "matches_per_value_map": true,
+    "n_mismatch": 0
+  },
+  "image_side_info": {
+    "samples": 5872164,
+    "H_V_given_T_bits_per_sample": 2.448454114661523,
+    "side_info_bytes": 1797215.5134709084,
+    "side_info_pct": 30.605676433269036
+  },
+  "image_lossless_total": {
+    "bytes": 2708003.5134709086,
+    "rate_pct_raw_rgb": 46.115938067651186
+  },
+  "video_side_info": [
+    {
+      "frame": "frame_000000.png",
+      "samples": 26542080,
+      "H_V_given_T_bits_per_sample": 2.52519177077056,
+      "side_info_bytes": 8377980.249391733,
+      "side_info_pct": 31.564897134631998,
+      "raw_rgb": 26542080
+    },
+    {
+      "frame": "frame_000001.png",
+      "samples": 26542080,
+      "H_V_given_T_bits_per_sample": 2.5247969457757162,
+      "side_info_bytes": 8376670.31481684,
+      "side_info_pct": 31.55996182219645,
+      "raw_rgb": 26542080
+    },
+    {
+      "frame": "frame_000002.png",
+      "samples": 26542080,
+      "H_V_given_T_bits_per_sample": 2.5249825466157207,
+      "side_info_bytes": 8377286.093859774,
+      "side_info_pct": 31.56228183269651,
+      "raw_rgb": 26542080
+    }
+  ],
+  "comparison": [
+    {
+      "method": "LMCompress-igpt as shipped (LOSSY)",
+      "rate_pct_raw_rgb": 15.510261634382147
+    },
+    {
+      "method": "LMCompress-igpt + optimal side channel (LOSSLESS bound)",
+      "rate_pct_raw_rgb": 46.115938067651186
+    },
+    {
+      "method": "LMCompress-bgpt (authors, lossless)",
+      "rate_pct_raw_rgb": 52.0896
+    },
+    {
+      "method": "WebP lossless (PIL, method 6)",
+      "rate_pct_raw_rgb": 46.5672
+    },
+    {
+      "method": "JPEG-2000 lossless (PIL)",
+      "rate_pct_raw_rgb": 50.2369
+    },
+    {
+      "method": "PNG (PIL optimize, level 9)",
+      "rate_pct_raw_rgb": 52.0878
+    },
+    {
+      "method": "PNG (ffmpeg, earlier project run)",
+      "rate_pct_raw_rgb": 84.3809
+    }
+  ]
+}

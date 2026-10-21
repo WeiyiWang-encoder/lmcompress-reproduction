@@ -1,0 +1,18 @@
+copying capsule -> /mnt/d/Document/capsule-4957991-code/repro_understanding_is_compression/artifacts/refrun/capsule (excluding .venv and our repro folder)
+installed reconstructed samplings.py
+  LJ001-0004.wav: wrote 8160 bytes (one context window)
+
+=== running the AUTHORS' script, unmodified ===
+Script started
+8160
+Working on device cuda:0
+Found 1 files: ['D:\\Document\\capsule-4957991-code\\repro_understanding_is_compression\\artifacts\\refrun\\one\\LJ001-0004.wav']
+  0%|          | 0/1 [00:00<?, ?it/s]100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 1/1 [00:00<00:00, 997.93it/s]
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+Loaded 1 data entries
+Parameter Number: 110084352
+Theoretical compression ratio: 3.666938
+Total size: 8204
+compressed size: 2237.288734436035
+total compression ratio: 3.666938total loss: 5.132615089416504
+time cost 0.7402091026306152

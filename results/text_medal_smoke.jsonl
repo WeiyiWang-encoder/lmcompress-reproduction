@@ -1,0 +1,1 @@
+{"ac_bits": 10, "bits_per_byte": 0.730296, "chars": 103369, "coded_bits": 75610.430593, "coded_symbols": 19338, "compression_rate_pct": 9.128696, "compression_ratio": 10.954467, "extension": "csv", "predictor": "llama", "raw_bytes": 103534, "symbols": 19338, "unit": "medal_102285.csv", "wall_seconds": 293.1, "windows": 5}

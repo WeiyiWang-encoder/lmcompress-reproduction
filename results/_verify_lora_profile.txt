@@ -1,0 +1,61 @@
+repo       = <capsule>
+device     = cuda:0  (NVIDIA GeForce RTX 5070)
+vram       = 11.94 GiB
+windows    = 13   arms = ['base', 'lora', 'scale']
+payload    = 103369 chars  (authors' 'Total size' denominator)
+measuring  = first 13 window(s) = 103369 chars  tokens/window=[1496, 1537, 1621, 1603, 1647, 1497, 1441, 1575, 1614, 1528, 1489, 1478, 842]
+
+loading base Llama-3-8B exactly as the authors do ...
+  params   = 8.030 B   dtype = torch.bfloat16
+  vram allocated = 14.96 GiB
+  [19s]
+
+--- ARM: base (no adapter) ---
+    window  0:  5856.000 bits over  1495 tokens = 3.917057 bits/token
+    window  4:  6272.000 bits over  1646 tokens = 3.810450 bits/token
+    window  8:  5920.000 bits over  1613 tokens = 3.670180 bits/token
+    window 12:  3728.000 bits over   841 tokens = 4.432818 bits/token
+  base         bits/token=3.892046  total_bits=21776.0  ratio=10.889420  rate=9.1832%  [853s]
+
+attaching the published adapter exactly as the authors do:
+   PeftModel.from_pretrained(model, lora_path, device_map=self.device)
+  LoRA modules        = 224
+  native scaling      = [4.0]  (= lora_alpha / r = 32 / 8)
+  -> 'lam' below is RELATIVE to that native magnitude
+  [0s]
+
+--- ARM: lora_live (lam = 1.0 x native, the authors' setting) ---
+    window  0:  6112.000 bits over  1495 tokens = 4.088294 bits/token
+    window  4:  6400.000 bits over  1646 tokens = 3.888214 bits/token
+    window  8:  6176.000 bits over  1613 tokens = 3.828890 bits/token
+    window 12:  3936.000 bits over   841 tokens = 4.680143 bits/token
+  lora_lam=1.0 bits/token=4.043610  total_bits=22624.0  ratio=10.481259  rate=9.5408%  [874s]
+
+--- ARM: delta = 0.25 x native (1.00 x raw B@A) (windows=[0, 4, 8, 12]) ---
+    window  0:  5664.000 bits over  1495 tokens = 3.788629 bits/token
+    window  4:  6016.000 bits over  1646 tokens = 3.654921 bits/token
+    window  8:  5664.000 bits over  1613 tokens = 3.511469 bits/token
+    window 12:  3600.000 bits over   841 tokens = 4.280618 bits/token
+  lora_lam=0.25 bits/token=3.743342  total_bits=20944.0  ratio=11.322002  rate=8.8324%  [873s]
+
+==============================================================================
+SUMMARY (authors' csv path, ctx 8192, first 13 window(s) of medal_102285.csv)
+==============================================================================
+arm                 windows   bits/token   total bits      ratio    rate %  vs base (same set)
+base                   0-12     3.892046      21776.0  10.889420    9.1832             +0.0000
+lora_lam=1.0           0-12     4.043610      22624.0  10.481259    9.5408             +3.8942
+lora_lam=0.25          0-12     3.743342      20944.0  11.322002    8.8324             -3.8207
+
+per-window detail (bits; positive delta = adapter costs MORE bits)
+window  tokens        base       +LoRA  delta bits  delta bits/tok   adapter
+     0    1495      5856.0      6112.0      +256.0       +0.171237     WORSE
+     4    1646      6272.0      6400.0      +128.0       +0.077764     WORSE
+     8    1613      5920.0      6176.0      +256.0       +0.158710     WORSE
+    12     841      3728.0      3936.0      +208.0       +0.247325     WORSE
+  -> adapter worse on 4 of 4 windows
+
+paper (MeDAL table)  LMCompress* base 9.08 %   LMCompress +LoRA 9.06 %
+      -> the paper says the adapter HELPS by 0.02 pp
+      this run: base 9.1832 %  +LoRA 9.5408 %   -> adapter HURTS by 0.3576 pp
+
+total wall clock 2622s

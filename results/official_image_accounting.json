@@ -1,0 +1,14 @@
+{
+  "chunks": 5733,
+  "raw_length": 5870592,
+  "compressed_length": 910788,
+  "rate_pct": 15.514414900575614,
+  "ratio": 6.445618519348081,
+  "source_rgb_samples": 5872164,
+  "per_chunk_bytes": 158.8676085818943,
+  "last_printed_checkpoint": [
+    5700,
+    5836800,
+    906459
+  ]
+}

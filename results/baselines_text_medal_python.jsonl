@@ -1,0 +1,40 @@
+{"codec": "zlib 9", "compressed_bytes": 36109, "compression_rate_pct": 34.758293, "compression_ratio": 2.877011, "original_bytes": 103886, "seconds": 0.006, "unit": "medal_102285.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 32652, "compression_rate_pct": 31.430607, "compression_ratio": 3.181612, "original_bytes": 103886, "seconds": 0.038, "unit": "medal_102285.csv"}
+{"codec": "brotli q11", "compressed_bytes": 29719, "compression_rate_pct": 28.60732, "compression_ratio": 3.495609, "original_bytes": 103886, "seconds": 0.121, "unit": "medal_102285.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 32884, "compression_rate_pct": 31.653928, "compression_ratio": 3.159166, "original_bytes": 103886, "seconds": 0.028, "unit": "medal_102285.csv"}
+{"codec": "zlib 9", "compressed_bytes": 37221, "compression_rate_pct": 35.523679, "compression_ratio": 2.815024, "original_bytes": 104778, "seconds": 0.006, "unit": "medal_103851.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33728, "compression_rate_pct": 32.189964, "compression_ratio": 3.106558, "original_bytes": 104778, "seconds": 0.035, "unit": "medal_103851.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30408, "compression_rate_pct": 29.021359, "compression_ratio": 3.445738, "original_bytes": 104778, "seconds": 0.12, "unit": "medal_103851.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 34039, "compression_rate_pct": 32.486782, "compression_ratio": 3.078175, "original_bytes": 104778, "seconds": 0.027, "unit": "medal_103851.csv"}
+{"codec": "zlib 9", "compressed_bytes": 36372, "compression_rate_pct": 34.769807, "compression_ratio": 2.876059, "original_bytes": 104608, "seconds": 0.006, "unit": "medal_108122.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33008, "compression_rate_pct": 31.553992, "compression_ratio": 3.169171, "original_bytes": 104608, "seconds": 0.037, "unit": "medal_108122.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30111, "compression_rate_pct": 28.784605, "compression_ratio": 3.474079, "original_bytes": 104608, "seconds": 0.117, "unit": "medal_108122.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33305, "compression_rate_pct": 31.837909, "compression_ratio": 3.14091, "original_bytes": 104608, "seconds": 0.03, "unit": "medal_108122.csv"}
+{"codec": "zlib 9", "compressed_bytes": 35917, "compression_rate_pct": 34.869181, "compression_ratio": 2.867862, "original_bytes": 103005, "seconds": 0.006, "unit": "medal_109047.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 32388, "compression_rate_pct": 31.443134, "compression_ratio": 3.180345, "original_bytes": 103005, "seconds": 0.039, "unit": "medal_109047.csv"}
+{"codec": "brotli q11", "compressed_bytes": 29472, "compression_rate_pct": 28.612203, "compression_ratio": 3.495012, "original_bytes": 103005, "seconds": 0.112, "unit": "medal_109047.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 32612, "compression_rate_pct": 31.660599, "compression_ratio": 3.1585, "original_bytes": 103005, "seconds": 0.028, "unit": "medal_109047.csv"}
+{"codec": "zlib 9", "compressed_bytes": 34351, "compression_rate_pct": 33.39945, "compression_ratio": 2.994061, "original_bytes": 102849, "seconds": 0.006, "unit": "medal_11193.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 30964, "compression_rate_pct": 30.106272, "compression_ratio": 3.321567, "original_bytes": 102849, "seconds": 0.038, "unit": "medal_11193.csv"}
+{"codec": "brotli q11", "compressed_bytes": 28534, "compression_rate_pct": 27.743585, "compression_ratio": 3.604437, "original_bytes": 102849, "seconds": 0.119, "unit": "medal_11193.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 31210, "compression_rate_pct": 30.345458, "compression_ratio": 3.295386, "original_bytes": 102849, "seconds": 0.029, "unit": "medal_11193.csv"}
+{"codec": "zlib 9", "compressed_bytes": 36952, "compression_rate_pct": 35.398705, "compression_ratio": 2.824962, "original_bytes": 104388, "seconds": 0.006, "unit": "medal_115377.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33352, "compression_rate_pct": 31.950033, "compression_ratio": 3.129887, "original_bytes": 104388, "seconds": 0.038, "unit": "medal_115377.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30257, "compression_rate_pct": 28.985132, "compression_ratio": 3.450045, "original_bytes": 104388, "seconds": 0.116, "unit": "medal_115377.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33565, "compression_rate_pct": 32.154079, "compression_ratio": 3.110025, "original_bytes": 104388, "seconds": 0.027, "unit": "medal_115377.csv"}
+{"codec": "zlib 9", "compressed_bytes": 36961, "compression_rate_pct": 35.568151, "compression_ratio": 2.811504, "original_bytes": 103916, "seconds": 0.006, "unit": "medal_116079.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33580, "compression_rate_pct": 32.314562, "compression_ratio": 3.09458, "original_bytes": 103916, "seconds": 0.035, "unit": "medal_116079.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30500, "compression_rate_pct": 29.350629, "compression_ratio": 3.407082, "original_bytes": 103916, "seconds": 0.114, "unit": "medal_116079.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33800, "compression_rate_pct": 32.526271, "compression_ratio": 3.074438, "original_bytes": 103916, "seconds": 0.028, "unit": "medal_116079.csv"}
+{"codec": "zlib 9", "compressed_bytes": 36936, "compression_rate_pct": 35.33193, "compression_ratio": 2.830301, "original_bytes": 104540, "seconds": 0.006, "unit": "medal_116572.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33376, "compression_rate_pct": 31.926535, "compression_ratio": 3.132191, "original_bytes": 104540, "seconds": 0.035, "unit": "medal_116572.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30036, "compression_rate_pct": 28.731586, "compression_ratio": 3.48049, "original_bytes": 104540, "seconds": 0.117, "unit": "medal_116572.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33607, "compression_rate_pct": 32.147503, "compression_ratio": 3.110661, "original_bytes": 104540, "seconds": 0.029, "unit": "medal_116572.csv"}
+{"codec": "zlib 9", "compressed_bytes": 33820, "compression_rate_pct": 32.751959, "compression_ratio": 3.053253, "original_bytes": 103261, "seconds": 0.005, "unit": "medal_11667.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 30656, "compression_rate_pct": 29.687878, "compression_ratio": 3.368378, "original_bytes": 103261, "seconds": 0.035, "unit": "medal_11667.csv"}
+{"codec": "brotli q11", "compressed_bytes": 28221, "compression_rate_pct": 27.329776, "compression_ratio": 3.659013, "original_bytes": 103261, "seconds": 0.112, "unit": "medal_11667.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 30848, "compression_rate_pct": 29.873815, "compression_ratio": 3.347413, "original_bytes": 103261, "seconds": 0.029, "unit": "medal_11667.csv"}
+{"codec": "zlib 9", "compressed_bytes": 36468, "compression_rate_pct": 35.172933, "compression_ratio": 2.843095, "original_bytes": 103682, "seconds": 0.006, "unit": "medal_117424.csv"}
+{"codec": "lzma preset 9e (7z-equivalent)", "compressed_bytes": 33012, "compression_rate_pct": 31.839664, "compression_ratio": 3.140737, "original_bytes": 103682, "seconds": 0.036, "unit": "medal_117424.csv"}
+{"codec": "brotli q11", "compressed_bytes": 30065, "compression_rate_pct": 28.997319, "compression_ratio": 3.448595, "original_bytes": 103682, "seconds": 0.114, "unit": "medal_117424.csv"}
+{"codec": "zstd --ultra -22", "compressed_bytes": 33211, "compression_rate_pct": 32.031597, "compression_ratio": 3.121917, "original_bytes": 103682, "seconds": 0.027, "unit": "medal_117424.csv"}

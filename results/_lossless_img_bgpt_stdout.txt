@@ -1,0 +1,11 @@
+8160
+Working on device cuda:0
+Found 1 files: ['D:\\Document\\capsule-4957991-code\\repro_understanding_is_compression\\artifacts\\lossless_img\\test_image.bmp']
+  0%|          | 0/1 [00:00<?, ?it/s]100%|##########| 1/1 [00:00<00:00,  5.03it/s]100%|##########| 1/1 [00:00<00:00,  5.03it/s]
+Loaded 1 data entries
+Parameter Number: 110084352
+Theoretical compression ratio: 1.920533
+Total size: 5874502
+compressed size: 3058787.8376464844
+total compression ratio: 1.920533total loss: 2087.353515625
+time cost 35.697954416275024
